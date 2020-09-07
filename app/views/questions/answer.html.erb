@@ -1,0 +1,17 @@
+<blockquote>
+  <p><%= @question %></p>
+  <footer>-<cite>You</cite></footer>
+</blockquote>
+
+<blockquote>
+  <% if @question == "I am going to work" %>
+    <p><%= "Great!" %></p>
+  <% elsif @question.include? "?" %>
+    <p><%= "Silly question, get dressed and go to work!" %></p>
+  <% else %>
+    <p><%= "I don't care, get dressed and go to work!" %></p>
+  <% end %>
+<footer>-<cite>Your coach</cite></footer>
+</blockquote>
+
+<%= link_to 'Ask a new question', '/ask' %>
